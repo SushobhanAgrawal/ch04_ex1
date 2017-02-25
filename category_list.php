@@ -40,7 +40,7 @@ $statement->closeCursor();
     <?php endforeach; ?>    
     </table>
 
-    <h2>Add Category</h2>
+    <h2><a href="add_category_form.php">Add Category</a></h2>
     
     <!-- add code for the form here -->
     
