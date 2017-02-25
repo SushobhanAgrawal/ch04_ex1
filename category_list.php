@@ -25,16 +25,20 @@ $statement->closeCursor();
     <h1>Category List</h1>
     <table>
         <tr>
+            <th>Category_ID</th>
             <th>Name</th>
             <th>&nbsp;</th>
         </tr>
         
         <?php foreach ($categories as $category) : ?>
         <tr>
+          <td><?php echo $category['categoryID']; ?></td>
           <td><?php echo $category['categoryName']; ?></td>
-          <td>
+          <td><form action="delete_category.php" method="post">
+              <input type="hidden" name="category_id"
+                      value="<?php echo $category['categoryID']; ?>">
               <input type="submit" value="Delete">
-          </td>    
+          </form></td>    
         </tr>
         
     <?php endforeach; ?>    

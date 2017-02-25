@@ -1,0 +1,13 @@
+<?php
+require_once('database.php');
+{
+    $query = 'DELETE FROM categories
+              WHERE categoryName = :category';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':category', $category);
+    $success = $statement->execute();
+    $statement->closeCursor();    
+}
+
+include('index.php');
+?>
