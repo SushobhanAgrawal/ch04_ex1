@@ -29,8 +29,15 @@ $statement->closeCursor();
             <th>&nbsp;</th>
         </tr>
         
-        <!-- add code for the rest of the table here -->
-    
+        <?php foreach ($categories as $category) : ?>
+        <tr>
+          <td><?php echo $category['categoryName']; ?></td>
+          <td>
+              <input type="submit" value="Delete">
+          </td>    
+        </tr>
+        
+    <?php endforeach; ?>    
     </table>
 
     <h2>Add Category</h2>
